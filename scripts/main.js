@@ -98,49 +98,7 @@ const swiper = new Swiper(".swiper", {
 	},
 })
 
-//
-
-const form = document.getElementById("form")
-const TOKEN = "7886052411:AAFRj31H-lb2iX6Pbnybl03M3ETFZ6uWFMI"
-const CHAT_ID = "@message_remito_project_bot"
-const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`
-
-form.addEventListener("submit", function (e) {
-	e.preventDefault()
-
-	const name = form.name.value
-	const phone = form.phone.value
-	const question = form.question.value
-	const consent = form.consent.checked ? "✅ Согласен" : "❌ Не согласен"
-
-	const text = `
-		📝 Новая заявка с сайта:
-		👤 Имя: ${name}
-		📞 Телефон: ${phone}
-		❓ Вопрос: ${question}
-		🔐 Согласие: ${consent}
-`
-
-	fetch(URL, {
-		method: "POST",
-		headers: { "Content-Type": "application/json" },
-		body: JSON.stringify({
-			chat_id: CHAT_ID,
-			text: text,
-		}),
-	})
-		.then(res => {
-			if (res.ok) {
-				alert("Отправлено!")
-				form.reset()
-			} else {
-				alert("Ошибка отправки")
-			}
-		})
-		.catch(() => alert("Ошибка сети"))
-})
-
-// PopUp
+// POPUP
 const trigger = document.querySelector(".header__contact__btn")
 const popup = document.querySelector(".header__contact__list")
 
@@ -149,15 +107,11 @@ trigger.addEventListener("click", () => {
 })
 
 // HEADER FIXED
+const mainMenu = document.querySelector(".header")
 window.addEventListener("scroll", () => {
-	const header = document.querySelector(".header__content")
-	const homeContent = document.querySelector(".home__content")
-
-	const triggerPoint = homeContent.offsetTop
-
-	if (window.scrollY >= triggerPoint) {
-		header.classList.add("fixed")
+	if (this.scrollY > 150) {
+		mainMenu.classList.add("fixed")
 	} else {
-		header.classList.remove("fixed")
+		mainMenu.classList.remove("fixed")
 	}
 })
