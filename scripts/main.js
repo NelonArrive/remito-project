@@ -147,3 +147,17 @@ const popup = document.querySelector(".header__contact__list")
 trigger.addEventListener("click", () => {
 	popup.classList.toggle("active")
 })
+
+// HEADER FIXED
+window.addEventListener("scroll", () => {
+	const header = document.querySelector(".header__content")
+	const homeContent = document.querySelector(".home__content")
+
+	const triggerPoint = homeContent.offsetTop
+
+	if (window.scrollY >= triggerPoint) {
+		header.classList.add("fixed")
+	} else {
+		header.classList.remove("fixed")
+	}
+})

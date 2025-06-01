@@ -11,16 +11,11 @@ body {
 	margin: 0 auto;
 	padding: 0 15px;
 }
-.header {
-	padding: 3% 0;
+.section {
+	position: relative;
 }
-.header__content {
-	display: flex;
-	align-items: center;
-	padding-right: 3%;
-	border-radius: 15px;
-	border: 1px solid #ffffff4f;
-}
+
+/* ======= LOGO ======== */
 .logo {
 	display: flex;
 	align-items: center;
@@ -47,6 +42,8 @@ body {
 .logo__name__description {
 	color: #0000007b;
 }
+
+/* ======= MENU ======== */
 .menu {
 	padding: 15px 0;
 	margin-right: auto;
@@ -65,11 +62,41 @@ body {
 .menu__link {
 	transition: all 0.2s ease-in;
 }
+.header.fixed .menu__link {
+	filter: invert(0.3);
+}
 .menu__item.active {
 	border: 1px solid #f72585;
 }
 .menu__link:hover {
 	opacity: 0.7;
+}
+
+/* ======= HEADER ======== */
+.header {
+	padding: 3% 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transition: all 0.5s ease;
+	z-index: 100;
+}
+.header.fixed {
+	padding: 0;
+}
+.header__content {
+	transition: all 0.3s ease-in;
+	display: flex;
+	align-items: center;
+	padding-right: 3%;
+	border-radius: 15px;
+	border: 1px solid #ffffff4f;
+}
+.header.fixed .header__content {
+	backdrop-filter: blur(10px);
+	background-color: rgba(255, 255, 255, 0.1);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .header__contact {
 	position: relative;
@@ -145,10 +172,10 @@ body {
 	width: 25px;
 	height: 25px;
 }
-.section {
-	position: relative;
-}
+
+/* ======= HOME ======== */
 .home {
+	padding-top: 105px;
 	background-color: #999;
 	background-image: url("/images/3bg.webp"), url("/images/2bg.webp"),
 		linear-gradient(#5618a5ed 0%, #5618a5ed 100%), url("/images/1bg.webp");
@@ -196,6 +223,8 @@ body {
 	color: #fff;
 	text-transform: uppercase;
 }
+
+/* ======= SERVICES ======== */
 .services {
 	padding-top: 6%;
 	padding-bottom: 3%;
@@ -298,6 +327,8 @@ body {
 	border-top-left-radius: 15px;
 	border-bottom-right-radius: 15px;
 }
+
+/* ======= SWIPER ======== */
 .swiper {
 	position: unset !important;
 }
@@ -353,7 +384,7 @@ body {
 	margin-left: 30px;
 }
 
-/* ========= About ========= */
+/* ========= ABOUT ========= */
 .about {
 	background-color: #5618a5;
 }
@@ -459,14 +490,12 @@ body {
 	height: 100%;
 	pointer-events: none;
 }
-
-/* Эффекты при наведении */
 .about__down-item:hover {
 	transform: translateY(-5px);
 	transition: all 0.4s ease;
 }
 
-/* ========= Advantages ========= */
+/* ========= ADVANTAGES ========= */
 .advantages {
 	padding: 6% 0;
 	background-color: #5618a5;
