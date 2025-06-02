@@ -75,17 +75,32 @@ let _slideDown = (target, duration = 300) => {
 	}
 }
 
-// ========= Swiper =========
+// ========= SWIPER SLIDER =========
 const swiper = new Swiper(".swiper", {
 	loop: true,
 	slidesPerView: 3,
-	watchOverflow: true,
 	spaceBetween: 50,
+	watchOverflow: true,
 	autoplay: {
 		delay: 2500,
 		disableOnInteraction: true,
 	},
 	speed: 1000,
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+			spaceBetween: 50,
+		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 50,
+		},
+		// от 1240px и выше — 3 слайда
+		1240: {
+			slidesPerView: 3,
+			spaceBetween: 50,
+		},
+	},
 
 	pagination: {
 		el: ".swiper-pagination",
@@ -114,4 +129,68 @@ window.addEventListener("scroll", () => {
 	} else {
 		mainMenu.classList.remove("fixed")
 	}
+})
+
+// BURGER MENU
+const burger = document.getElementById("burger")
+const menu = document.getElementById("menu")
+
+burger.addEventListener("click", () => {
+	if (menu.classList.contains("menu--active")) {
+		menu.style.maxHeight = "0"
+		menu.style.paddingTop = "0"
+		menu.style.paddingBottom = "0"
+		menu.classList.remove("menu--active")
+	} else {
+		menu.classList.add("menu--active")
+		menu.style.maxHeight = "400px"
+		menu.style.paddingTop = "20px"
+		menu.style.paddingBottom = "20px"
+	}
+})
+
+// Mask Phone
+const element = document.getElementById("phone")
+const maskOptions = { mask: "+{7} (000) 000-00-00" }
+IMask(element, maskOptions)
+
+// Active class Menu link
+const links = document.querySelectorAll(".menu__link")
+const sections = document.querySelectorAll("section")
+
+function setActiveLink(id) {
+	links.forEach(link => {
+		link.parentElement.classList.toggle(
+			"active",
+			link.getAttribute("href") === `#${id}`
+		)
+	})
+}
+
+links.forEach(link => {
+	link.addEventListener("click", e => {
+		e.preventDefault()
+		const targetId = link.getAttribute("href").substring(1)
+		document.getElementById(targetId).scrollIntoView({ behavior: "smooth" })
+		setActiveLink(targetId)
+	})
+})
+
+window.addEventListener("scroll", () => {
+	let current = "home"
+	const scrollY = window.scrollY
+	const scrollBottom = scrollY + window.innerHeight
+	const docHeight = document.body.offsetHeight
+
+	sections.forEach(section => {
+		if (scrollY >= section.offsetTop - window.innerHeight / 2) {
+			current = section.id
+		}
+	})
+
+	if (scrollBottom >= docHeight - 200) {
+		current = "clients"
+	}
+
+	setActiveLink(current)
 })

@@ -7,10 +7,9 @@ body {
 	font-family: "Play", serif;
 }
 .container {
-	max-width: 1580px;
+	max-width: 100%;
 	margin: 0 auto;
-	padding: 0 15px;
-	z-index: 1;
+	padding: 0 10%;
 }
 .section {
 	position: relative;
@@ -23,6 +22,9 @@ body {
 	padding: 15px 20px;
 	border-radius: 15px;
 	background-color: #fff;
+}
+.header.fixed .logo {
+	background-color: rgba(255, 255, 255, 0.7);
 }
 .logo__img {
 	border-radius: 15px;
@@ -63,14 +65,34 @@ body {
 .menu__link {
 	transition: all 0.2s ease-in;
 }
-/* .header.fixed .menu__link {
-	filter: invert(0.8);
-} */
 .menu__item.active {
 	border: 1px solid #f72585;
 }
 .menu__link:hover {
 	opacity: 0.7;
+}
+/* ======= BURGER MENU ======== */
+.burger {
+	display: none;
+	cursor: pointer;
+	flex-direction: column;
+	gap: 5px;
+	width: 50px;
+	min-height: 50px;
+
+	background-color: #f72585;
+
+	border-radius: 250px;
+	span {
+		display: block;
+		height: 3px;
+		background: #ffffff;
+		border-radius: 2px;
+		width: 25px;
+	}
+}
+.header.fixed .burger {
+	background-color: rgba(247, 37, 132, 0.8);
 }
 
 /* ======= HEADER ======== */
@@ -84,16 +106,27 @@ body {
 	z-index: 9999;
 	transition: all 0.2s ease-in;
 }
+.header.fixed {
+	position: fixed;
+	animation: fixed 0.4s forwards;
+}
+@keyframes fixed {
+	from {
+		top: -250px;
+	}
+	to {
+		top: 0;
+	}
+}
 .main-head {
 	transition: all 0.2s ease-in;
 	padding: 3% 0;
 	width: 100%;
 	transition: all 0.5s ease;
-	z-index: 100;
 }
-.header.fixed {
+.header.fixed .main-head {
 	padding: 0;
-	position: fixed;
+	padding-top: 1%;
 }
 .header__content {
 	transition: all 0.3s ease-in;
@@ -105,7 +138,10 @@ body {
 }
 .header.fixed .header__content {
 	backdrop-filter: blur(10px);
-	background-color: rgba(255, 255, 255, 0.1);
+	/* background-color: rgba(255, 255, 255, 0.2); */
+	/* background-color: rgba(0, 0, 0, 0.2); */
+	/* background-color: rgba(247, 37, 132, 0.2); */
+	background-color: rgba(85, 24, 165, 0.3);
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .header__contact {
@@ -122,13 +158,18 @@ body {
 	height: 55px;
 	cursor: pointer;
 }
+.header.fixed .header__contact__btn {
+	background-color: rgba(247, 37, 132, 0.8);
+}
 .header__contact__list {
 	position: absolute;
 	top: 100%;
 	right: 0;
 	width: 1000px;
 
-	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.93);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
 	padding: 10px 30px;
 	padding-bottom: 30px;
 	width: 340px;
@@ -201,13 +242,14 @@ body {
 	padding-bottom: 7%;
 }
 .home__title {
-	font-size: 55px;
+	/* font-size: 55px; */
 	font-weight: 400;
+	font-size: 2.9vw;
 	line-height: 3vw;
 }
 .home__title span {
 	font-weight: 700;
-	font-size: 86px;
+	font-size: 4.5vw;
 	line-height: 5vw;
 }
 .home__description {
@@ -363,7 +405,7 @@ body {
 .swiper-buttons {
 	position: absolute;
 	top: 40px;
-	right: 100px;
+	right: 140px;
 	z-index: 10;
 }
 .swiper-button-prev,

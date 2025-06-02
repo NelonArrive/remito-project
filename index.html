@@ -29,25 +29,26 @@
 									<div class="logo__name__description">Ремонт оргтехники</div>
 								</div>
 							</div>
-							<div class="menu">
+
+							<div class="menu menu--mobile-hidden" id="menu">
 								<ul class="menu__list">
 									<li class="menu__item active">
-										<a class="menu__link" href="#">Главная</a>
+										<a class="menu__link" href="#home">Главная</a>
 									</li>
 									<li class="menu__item">
-										<a class="menu__link" href="#">Услуги</a>
+										<a class="menu__link" href="#services">Услуги</a>
 									</li>
 									<li class="menu__item">
-										<a class="menu__link" href="#">О компании</a>
+										<a class="menu__link" href="#about">О компании</a>
 									</li>
 									<li class="menu__item">
-										<a class="menu__link" href="#">Преимущества</a>
+										<a class="menu__link" href="#advantages">Преимущества</a>
 									</li>
 									<li class="menu__item">
-										<a class="menu__link" href="#">Наши клиенты</a>
+										<a class="menu__link" href="#faq">FAQ</a>
 									</li>
 									<li class="menu__item">
-										<a class="menu__link" href="#">Контакты</a>
+										<a class="menu__link" href="#clients">Наши клиенты</a>
 									</li>
 								</ul>
 							</div>
@@ -91,13 +92,17 @@
 										</div>
 									</div>
 								</div>
+								<!-- Burger Menu -->
+								<div class="burger" id="burger">
+									<span></span><span></span><span></span>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</header>
 
-			<section class="section home">
+			<section id="home" class="section home">
 				<div class="container">
 					<div class="home__content">
 						<div class="home__title">
@@ -112,12 +117,12 @@
 							уже сегодня и получите квалифицированную помощь от профессионалов
 							своего дела.
 						</div>
-						<div class="btn">ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ</div>
+						<button class="btn">ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ</button>
 					</div>
 				</div>
 			</section>
 
-			<section class="section services">
+			<section class="section services" id="services">
 				<div class="container relative">
 					<h2 class="services__title">Наши услуги</h2>
 
@@ -287,7 +292,7 @@
 				</div>
 			</section>
 
-			<section class="section about">
+			<section class="section about" id="about">
 				<div class="about__container">
 					<div class="container">
 						<div class="about__top">
@@ -346,7 +351,7 @@
 				</div>
 			</section>
 
-			<section class="section advantages">
+			<section class="section advantages" id="advantages">
 				<div class="container">
 					<div class="advantages__title">Почему мы?</div>
 					<div class="advantages__list">
@@ -416,7 +421,7 @@
 				</div>
 			</section>
 
-			<section class="section faq">
+			<section class="section faq" id="faq">
 				<div class="faq__container">
 					<div class="container flex">
 						<div class="faq__quiz">
@@ -541,7 +546,12 @@
 						<div class="faq__feedback">
 							<form id="form" class="faq__feedback-content">
 								<input type="text" name="name" placeholder="Ваше имя:" />
-								<input type="tel" name="phone" placeholder="* Телефон:" />
+								<input
+									type="tel"
+									id="phone"
+									name="phone"
+									placeholder="* Телефон:"
+								/>
 								<textarea name="question" placeholder="Вопрос:"></textarea>
 								<div class="faq__feedback-checkbox">
 									<label>
@@ -560,7 +570,7 @@
 				</div>
 			</section>
 
-			<section class="section clients">
+			<section class="section clients" id="clients">
 				<div class="container">
 					<div class="clients__content">
 						<div class="clients__info">
@@ -702,6 +712,7 @@
 			</footer>
 		</div>
 
+		<script src="https://unpkg.com/imask"></script>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script src="/scripts/main.js"></script>
 	</body>
