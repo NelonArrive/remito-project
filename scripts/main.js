@@ -1,79 +1,21 @@
-document.addEventListener("DOMContentLoaded", () => {
-	const items = document.querySelectorAll(".faq__item")
-
-	items.forEach(item => {
-		const spoiler = item.querySelector(".faq__item-spoiler")
+document.querySelectorAll(".faq__item-img").forEach(img => {
+	img.addEventListener("click", () => {
+		const item = img.closest(".faq__item")
 		const text = item.querySelector(".faq__item-text")
 
-		text.style.maxHeight = "0px"
-
-		spoiler.addEventListener("click", () => {
-			items.forEach(el => {
-				if (el !== item) {
-					el.classList.remove("open")
-					el.querySelector(".faq__item-text").style.maxHeight = "0px"
-				}
-			})
-
-			if (item.classList.contains("open")) {
-				item.classList.remove("open")
-				text.style.maxHeight = "0px"
-			} else {
-				item.classList.add("open")
-				text.style.maxHeight = text.scrollHeight + "px"
-			}
-		})
+		if (text.classList.contains("active")) {
+			text.style.maxHeight = "0"
+			text.style.paddingTop = "0"
+			text.style.paddingBottom = "0"
+			text.classList.remove("active")
+		} else {
+			text.classList.add("active")
+			text.style.maxHeight = "500px"
+			text.style.paddingTop = "20px"
+			text.style.paddingBottom = "20px"
+		}
 	})
 })
-
-// Улучшенные анимации
-let _slideUp = (target, duration = 300) => {
-	if (!target.classList.contains("_slide")) {
-		target.classList.add("_slide")
-		target.style.willChange = "transform, height"
-		target.style.transition = `transform ${duration}ms ease-in-out, height ${duration}ms ease-in-out`
-		target.style.transform = "translateY(0)"
-		target.style.height = target.offsetHeight + "px"
-		requestAnimationFrame(() => {
-			target.style.height = "0"
-			target.style.transform = "translateY(-10px)"
-		})
-
-		setTimeout(() => {
-			target.hidden = true
-			target.style.removeProperty("height")
-			target.style.removeProperty("transform")
-			target.style.removeProperty("transition")
-			target.style.removeProperty("will-change")
-			target.classList.remove("_slide")
-		}, duration)
-	}
-}
-
-let _slideDown = (target, duration = 300) => {
-	if (!target.classList.contains("_slide")) {
-		target.classList.add("_slide")
-		target.hidden = false
-		let height = target.scrollHeight + "px"
-
-		target.style.willChange = "transform, height"
-		target.style.transition = `transform ${duration}ms ease-in-out, height ${duration}ms ease-in-out`
-		target.style.height = "0"
-		target.style.transform = "translateY(-10px)"
-		requestAnimationFrame(() => {
-			target.style.height = height
-			target.style.transform = "translateY(0)"
-		})
-
-		setTimeout(() => {
-			target.style.removeProperty("height")
-			target.style.removeProperty("transform")
-			target.style.removeProperty("transition")
-			target.style.removeProperty("will-change")
-			target.classList.remove("_slide")
-		}, duration)
-	}
-}
 
 // ========= SWIPER SLIDER =========
 const swiper = new Swiper(".swiper", {
@@ -188,7 +130,7 @@ window.addEventListener("scroll", () => {
 		}
 	})
 
-	if (scrollBottom >= docHeight - 200) {
+	if (scrollBottom >= docHeight - 100) {
 		current = "clients"
 	}
 
