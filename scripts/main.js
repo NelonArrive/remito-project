@@ -136,3 +136,37 @@ window.addEventListener("scroll", () => {
 
 	setActiveLink(current)
 })
+
+// Bot Send Form
+document.getElementById("form").addEventListener("submit", async e => {
+	e.preventDefault()
+	const form = e.target
+	const name = form.name.value
+	const phone = form.phone.value
+	const question = form.question.value
+	const consent = form.consent.checked ? "✅" : "❌"
+
+	const message = `
+📝 Новая заявка с формы:
+------------------------------------
+👤 Имя: ${name}
+📞 Телефон: ${phone}
+❓ Вопрос: ${question}
+-----------------------------------
+🔐 Согласие: ${consent}
+`
+
+	await fetch(
+		`https://api.telegram.org/bot7886052411:AAFRj31H-lb2iX6Pbnybl03M3ETFZ6uWFMI/sendMessage`,
+		{
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({
+				chat_id: "6430141755",
+				text: message,
+			}),
+		}
+	)
+
+	form.reset()
+})
