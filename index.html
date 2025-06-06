@@ -5,10 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<link rel="stylesheet" href="/styles/reset.css" />
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-		/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="/styles/main.css" />
 		<link rel="stylesheet" href="/styles/media.css" />
 
@@ -18,21 +15,21 @@
 		<div class="wrapper">
 			<header class="header">
 				<div class="container">
-					<div class="main-head">
+					<div class="header__main">
 						<div class="header__content">
-							<div class="logo">
+							<div class="header__logo logo">
 								<div class="logo__img">
 									<img src="/images/logo.png" alt="logo" />
 								</div>
-								<div class="logo__name">
-									<div class="logo__name__title">Ремито</div>
-									<div class="logo__name__description">Ремонт оргтехники</div>
+								<div class="logo__text">
+									<div class="logo__title">Ремито</div>
+									<div class="logo__description">Ремонт оргтехники</div>
 								</div>
 							</div>
 
-							<div class="menu menu--mobile-hidden" id="menu">
+							<nav class="header__menu" id="menu">
 								<ul class="menu__list">
-									<li class="menu__item active">
+									<li class="menu__item menu__item--active">
 										<a class="menu__link" href="#home">Главная</a>
 									</li>
 									<li class="menu__item">
@@ -51,51 +48,49 @@
 										<a class="menu__link" href="#clients">Наши клиенты</a>
 									</li>
 								</ul>
-							</div>
-							<div class="header__contact">
-								<div class="header__contact__btn">
+							</nav>
+
+							<div class="header__contacts">
+								<div class="header__contacts-btn">
 									<img src="/images/icons/support.svg" alt="support" />
 								</div>
-								<div class="header__contact__list">
-									<div class="header__contact__item">
-										<div class="header__contact__item__img">
-											<img src="/images/icons/phone.svg" alt="map" />
+								<div class="header__contacts-list">
+									<div class="header__contact-item">
+										<div class="header__contact-icon">
+											<img src="/images/icons/phone.svg" alt="phone" />
 										</div>
-										<div class="header__contact__item__text">
-											<div class="header__contact__item__title">Телефон:</div>
-											<div class="header__contact__item__description">
-												<a href="+79630376182">+7 (963) 037-61-82</a>
+										<div class="header__contact-info">
+											<div class="header__contact-title">Телефон:</div>
+											<div class="header__contact-description">
+												<a href="tel:+79630376182">+7 (963) 037-61-82</a>
 											</div>
 										</div>
 									</div>
-									<div class="header__contact__item">
-										<div class="header__contact__item__img">
+									<div class="header__contact-item">
+										<div class="header__contact-icon">
 											<img src="/images/icons/mail.svg" alt="mail" />
 										</div>
-										<div class="header__contact__item__text">
-											<div class="header__contact__item__title">Почта:</div>
-											<div class="header__contact__item__description">
+										<div class="header__contact-info">
+											<div class="header__contact-title">Почта:</div>
+											<div class="header__contact-description">
 												<a href="mailto:slavabogu@mail.ru">slavabogu@mail.ru</a>
 											</div>
 										</div>
 									</div>
-									<div class="header__contact-social">
-										<div class="header__contact-social__item">
-											<a href="https://t.me/aleksustm">
-												<img src="./images/icons/telegram.svg" alt="" />
-											</a>
-										</div>
-										<div class="header__contact-social__item">
-											<a href="https://wa.me/79630376182">
-												<img src="./images/icons/whatsapp.svg" alt="" />
-											</a>
-										</div>
+								</div>
+								<div class="header__contacts-social">
+									<div class="header__social-item">
+										<a href="https://t.me/aleksustm">
+											<img src="./images/icons/telegram.svg" alt="telegram" />
+										</a>
+									</div>
+									<div class="header__social-item">
+										<a href="https://wa.me/79630376182">
+											<img src="./images/icons/whatsapp.svg" alt="whatsapp" />
+										</a>
 									</div>
 								</div>
-								<!-- Burger Menu -->
-								<div class="burger" id="burger">
-									<span></span><span></span><span></span>
-								</div>
+								<div class="header__burger burger" id="burger"><span></span><span></span><span></span></div>
 							</div>
 						</div>
 					</div>
@@ -110,11 +105,9 @@
 							<span>В ЕКАТЕРИНБУРГЕ</span>
 						</div>
 						<div class="home__description">
-							Мы рады приветствовать вас на сайт нашей компании и готовы
-							предложить профессиональные услуги по обслуживанию и
-							восстановлению работоспособности вашего компьютера. Не
-							откладывайте ремонт вашего компьютера на потом - обращайтесь к нам
-							уже сегодня и получите квалифицированную помощь от профессионалов
+							Мы рады приветствовать вас на сайт нашей компании и готовы предложить профессиональные услуги по
+							обслуживанию и восстановлению работоспособности вашего компьютера. Не откладывайте ремонт вашего
+							компьютера на потом - обращайтесь к нам уже сегодня и получите квалифицированную помощь от профессионалов
 							своего дела.
 						</div>
 						<button class="btn">ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ</button>
@@ -122,14 +115,13 @@
 				</div>
 			</section>
 
-			<section class="section services" id="services">
-				<div class="container relative">
+			<section class="services section" id="services">
+				<div class="services__container container">
 					<h2 class="services__title">Наши услуги</h2>
 
 					<div class="services__slider swiper">
-						<div class="swiper-wrapper">
-							<div class="services__item swiper-slide">
-								<div class="services__left"></div>
+						<div class="services__wrapper swiper-wrapper">
+							<div class="services__slide swiper-slide">
 								<div class="services__image">
 									<img src="./images/services-1.png" alt="Устранение вирусов" />
 								</div>
@@ -137,162 +129,74 @@
 									<div class="services__block">
 										<h3 class="services__name">Устранение вирусов</h3>
 										<p class="services__text">
-											Мы удалим вирусы и другое вредоносное ПО с вашего
-											компьютера и защитим его от будущих угроз.
+											Мы удалим вирусы и другое вредоносное ПО с вашего компьютера и защитим его от будущих угроз.
 										</p>
 									</div>
-									<div class="services__price">
-										от <strong>1 200</strong>руб
-									</div>
+									<div class="services__price">от <strong>1 200</strong> руб</div>
 									<button class="services__button">ЗАКАЗАТЬ</button>
 								</div>
 							</div>
 
-							<div class="services__item swiper-slide">
-								<div class="services__left"></div>
+							<div class="services__slide swiper-slide">
 								<div class="services__image">
-									<img
-										src="./images/services-2.png"
-										alt="Диагностика компьютера"
-									/>
+									<img src="./images/services-1.png" alt="Устранение вирусов" />
 								</div>
 								<div class="services__content">
 									<div class="services__block">
-										<h3 class="services__name">Диагностика компьютера</h3>
+										<h3 class="services__name">Устранение вирусов</h3>
 										<p class="services__text">
-											Мы проведем полную диагностику вашего компьютера, чтобы
-											определить причину неисправности.
+											Мы удалим вирусы и другое вредоносное ПО с вашего компьютера и защитим его от будущих угроз.
 										</p>
 									</div>
-									<div class="services__price">от <strong>500</strong>руб</div>
+									<div class="services__price">от <strong>1 200</strong> руб</div>
 									<button class="services__button">ЗАКАЗАТЬ</button>
 								</div>
 							</div>
 
-							<div class="services__item swiper-slide">
-								<div class="services__left"></div>
+							<div class="services__slide swiper-slide">
 								<div class="services__image">
-									<img
-										src="./images/services-3.png"
-										alt="Устранение проблем с сетью"
-									/>
+									<img src="./images/services-1.png" alt="Устранение вирусов" />
 								</div>
 								<div class="services__content">
 									<div class="services__block">
-										<h3 class="services__name">Устранение проблем с сетью</h3>
+										<h3 class="services__name">Устранение вирусов</h3>
 										<p class="services__text">
-											Мы поможем настроить вашу сеть и устранить проблемы с
-											подключением к Интернету.
+											Мы удалим вирусы и другое вредоносное ПО с вашего компьютера и защитим его от будущих угроз.
 										</p>
 									</div>
-									<div class="services__price">
-										от <strong>1 500</strong>руб
-									</div>
+									<div class="services__price">от <strong>1 200</strong> руб</div>
 									<button class="services__button">ЗАКАЗАТЬ</button>
 								</div>
 							</div>
 
-							<div class="services__item swiper-slide">
-								<div class="services__left"></div>
+							<div class="services__slide swiper-slide">
 								<div class="services__image">
-									<img
-										src="./images/services-4.png"
-										alt="Замена материнской платы"
-									/>
+									<img src="./images/services-1.png" alt="Устранение вирусов" />
 								</div>
 								<div class="services__content">
 									<div class="services__block">
-										<h3 class="services__name">Замена материнской платы</h3>
+										<h3 class="services__name">Устранение вирусов</h3>
 										<p class="services__text">
-											Если ваша материнская плата вышла из строя, мы заменим ее
-											на новую и настроим ваш компьютер.
+											Мы удалим вирусы и другое вредоносное ПО с вашего компьютера и защитим его от будущих угроз.
 										</p>
 									</div>
-									<div class="services__price">
-										от <strong>4 000</strong>руб
-									</div>
-									<button class="services__button">ЗАКАЗАТЬ</button>
-								</div>
-							</div>
-
-							<div class="services__item swiper-slide">
-								<div class="services__left"></div>
-								<div class="services__image">
-									<img src="./images/services-5.png" alt="Установка программ" />
-								</div>
-								<div class="services__content">
-									<div class="services__block">
-										<h3 class="services__name">Установка программ</h3>
-										<p class="services__text">
-											Мы установим и настроим любое программное обеспечение,
-											которое вам нужно.
-										</p>
-									</div>
-									<div class="services__price">
-										от <strong>1 000</strong>руб
-									</div>
-									<button class="services__button">ЗАКАЗАТЬ</button>
-								</div>
-							</div>
-
-							<div class="services__item swiper-slide">
-								<div class="services__left"></div>
-								<div class="services__image">
-									<img
-										src="./images/services-6.png"
-										alt="Ремонт блока питания"
-									/>
-								</div>
-								<div class="services__content">
-									<div class="services__block">
-										<h3 class="services__name">Ремонт блока питания</h3>
-										<p class="services__text">
-											Если у вас проблемы с блоком питания, мы проведем его
-											ремонт или заменим на новый.
-										</p>
-									</div>
-									<div class="services__price">
-										от <strong>4 000</strong>руб
-									</div>
-									<button class="services__button">ЗАКАЗАТЬ</button>
-								</div>
-							</div>
-
-							<div class="services__item swiper-slide">
-								<div class="services__left"></div>
-								<div class="services__image">
-									<img
-										src="./images/services-7.png"
-										alt="Замена жесткого диска"
-									/>
-								</div>
-								<div class="services__content">
-									<div class="services__block">
-										<h3 class="services__name">Замена жесткого диска</h3>
-										<p class="services__text">
-											Мы заменим жесткий диск вашего компьютера на новый и
-											перенесем все ваши данные.
-										</p>
-									</div>
-									<div class="services__price">
-										от <strong>3 000</strong>руб
-									</div>
+									<div class="services__price">от <strong>1 200</strong> руб</div>
 									<button class="services__button">ЗАКАЗАТЬ</button>
 								</div>
 							</div>
 						</div>
 
-						<div class="swiper-buttons">
+						<div class="services__nav">
 							<div class="swiper-button-prev"></div>
 							<div class="swiper-button-next"></div>
 						</div>
 
-						<div class="swiper-pagination"></div>
+						<div class="services__pagination swiper-pagination"></div>
 					</div>
 				</div>
 			</section>
 
-			<section class="section about" id="about">
+			<section class="about section" id="about">
 				<div class="about__container">
 					<div class="container">
 						<div class="about__top">
@@ -300,285 +204,118 @@
 								<img src="/images/about.png" alt="comp" />
 							</div>
 							<div class="about__content">
-								<div class="about__title">О нас</div>
+								<h2 class="about__title">О нас</h2>
 								<div class="about__description">
 									<p>
-										Добро пожаловать в нашу компанию по ремонту компьютеров! Мы
-										гордимся тем, что предоставляем высококачественные услуги по
-										ремонту и технической поддержке компьютеров, принтеров и
-										оргтехники. Быстро и надёжно решаем любые проблемы!
+										Добро пожаловать в нашу компанию по ремонту компьютеров! Мы гордимся тем, что предоставляем
+										высококачественные услуги по ремонту и технической поддержке компьютеров, принтеров и оргтехники.
+										Быстро и надёжно решаем любые проблемы!
 									</p>
 									<div class="about__info">
 										<img src="/images/about-text.webp" alt="" />
-										<span>Мы вернём ваш ПК к жизни в кратчайшие сроки!</span>
+										<span class="about__info-text">Мы вернём ваш ПК к жизни в кратчайшие сроки!</span>
 									</div>
 									<p>
-										Наша команда профессионалов имеет многолетний опыт работы и
-										обладает глубокими знаниями в области компьютерной техники и
-										программного обеспечения. Мы всегда готовы помочь нашим
-										клиентам в любой ситуации, будь то поломка компьютера или
-										заправка картриджей.
+										Наша команда профессионалов имеет многолетний опыт работы и обладает глубокими знаниями в области
+										компьютерной техники и программного обеспечения. Мы всегда готовы помочь нашим клиентам в любой
+										ситуации, будь то поломка компьютера или заправка картриджей.
 									</p>
 								</div>
-								<button class="btn about__button">Подробнее</button>
+								<button class="about__button">Подробнее</button>
 							</div>
 						</div>
-						<div class="about__down">
-							<div class="about__down-item">
-								<div class="about__down-title">720+</div>
-								<div class="about__down-text">заправленных картриджей</div>
+
+						<div class="about__stats">
+							<div class="about__stat">
+								<div class="about__stat-value">720+</div>
+								<div class="about__stat-text">заправленных картриджей</div>
 							</div>
-							<div class="about__down-item">
-								<div class="about__down-title purpure">20+</div>
-								<div class="about__down-text">
-									отремонтированных компьютеров
-								</div>
+							<div class="about__stat">
+								<div class="about__stat-value about__stat-value--highlight">20+</div>
+								<div class="about__stat-text">отремонтированных компьютеров</div>
 							</div>
-							<div class="about__down-item">
-								<div class="about__down-title">20+</div>
-								<div class="about__down-text">
-									отремонтированных компьютеров
-								</div>
+							<div class="about__stat">
+								<div class="about__stat-value">20+</div>
+								<div class="about__stat-text">отремонтированных компьютеров</div>
 							</div>
-							<div class="about__down-item">
-								<div class="about__down-title purpure">20+</div>
-								<div class="about__down-text">
-									отремонтированных компьютеров
-								</div>
+							<div class="about__stat">
+								<div class="about__stat-value about__stat-value--highlight">20+</div>
+								<div class="about__stat-text">отремонтированных компьютеров</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="section advantages" id="advantages">
+			<section class="advantages section" id="advantages">
 				<div class="container">
-					<div class="advantages__title">Почему мы?</div>
+					<h2 class="advantages__title">Почему мы?</h2>
+
 					<div class="advantages__list">
 						<div class="advantages__item">
-							<div class="advantages__img">
-								<img src="./images/advantages-1.png" alt="" />
+							<div class="advantages__image">
+								<img src="./images/advantages-1.png" alt="Опытные мастера" />
 							</div>
 							<div class="advantages__name">Опытные мастера</div>
 							<div class="advantages__text">
-								Мы работаем только с квалифицированными специалистами, которые
-								имеют многолетний опыт в ремонте компьютеров.
-							</div>
-						</div>
-						<div class="advantages__item">
-							<div class="advantages__img">
-								<img src="./images/advantages-2.png" alt="" />
-							</div>
-							<div class="advantages__name">Индивидуальный подход</div>
-							<div class="advantages__text">
-								Мы готовы предложить индивидуальный подход к каждому клиенту,
-								учитывая все его требования и пожелания.
-							</div>
-						</div>
-						<div class="advantages__item">
-							<div class="advantages__img">
-								<img src="./images/advantages-3.png" alt="" />
-							</div>
-							<div class="advantages__name">Качественно и с гарантией</div>
-							<div class="advantages__text">
-								Мы используем только качественные комплектующие и запчасти,
-								чтобы обеспечить надежный ремонт.
-							</div>
-						</div>
-						<div class="advantages__item">
-							<div class="advantages__img">
-								<img src="./images/advantages-4.png" alt="" />
-							</div>
-							<div class="advantages__name">Быстрый ремонт</div>
-							<div class="advantages__text">
-								Мы понимаем, что время - это самый ценный ресурс, поэтому мы
-								стремимся выполнить все работы в кратчайшие сроки.
-							</div>
-						</div>
-						<div class="advantages__item">
-							<div class="advantages__img">
-								<img src="./images/advantages-5.png" alt="" />
-							</div>
-							<div class="advantages__name">Доступные цены</div>
-							<div class="advantages__text">
-								Мы предлагаем разумные цены на весь спектр услуг по ремонту
-								компьютерной техники специально для Вас!
-							</div>
-						</div>
-						<div class="advantages__item">
-							<div class="advantages__img">
-								<img src="./images/advantages-6.png" alt="" />
-							</div>
-							<div class="advantages__name">Полный спектр услуг</div>
-							<div class="advantages__text">
-								Наша компания предоставляет широкий спектр услуг по ремонту
-								компьютеров, включая диагностику, настройку, восстановление
-								данных и многое другое.
+								Мы работаем только с квалифицированными специалистами, которые имеют многолетний опыт в ремонте
+								компьютеров.
 							</div>
 						</div>
 					</div>
-					<button class="btn advantages__btn">Заказать консультацию</button>
+
+					<button class="advantages__button">Заказать консультацию</button>
 				</div>
 			</section>
 
-			<section class="section faq" id="faq">
+			<section class="faq section" id="faq">
 				<div class="faq__container">
-					<div class="container flex">
-						<div class="faq__quiz">
-							<div class="faq__title">Остались вопросы?</div>
-							<p class="faq__description">
-								Свяжитесь с Нами! Если вы не смогли найти ответ на интересующий
-								Вас вопрос или Вы хотите уточнить определенную информацию, то Вы
-								всегда можете заказать консультацию заполнив форму связи. Наш
-								консультант свяжется с Вами в течение ближайших 5 минут!
-							</p>
-							<div class="faq__list">
-								<div class="faq__item">
-									<div class="faq__item-spoiler">
-										<div class="faq__item-title">
-											Какие услуги вы предоставляете?
-										</div>
-										<div class="faq__item-img">
-											<img src="./images/icons/arrow-b.svg" alt="" />
-										</div>
-									</div>
-									<div class="faq__item-text">
-										<p>
-											Мы предлагаем ремонт компьютеров, ноутбуков, установку
-											программного обеспечения, настройку сети, удаление вирусов
-											и многое другое.
-										</p>
-									</div>
-								</div>
+					<div class="container">
+						<div class="faq__wrapper">
+							<div class="faq__content">
+								<h2 class="faq__title">Остались вопросы?</h2>
+								<p class="faq__description">
+									Свяжитесь с нами! Если вы не смогли найти ответ на интересующий вас вопрос или хотите уточнить
+									информацию — заполните форму, и наш консультант свяжется с вами в течение 5 минут!
+								</p>
 
-								<div class="faq__item">
-									<div class="faq__item-spoiler">
-										<div class="faq__item-title">
-											Какие услуги вы предоставляете?
+								<div class="faq__list">
+									<div class="faq__item">
+										<div class="faq__item-header">
+											<div class="faq__item-title">Какие услуги вы предоставляете?</div>
+											<div class="faq__item-icon">
+												<img src="./images/icons/arrow-b.svg" alt="toggle" />
+											</div>
 										</div>
-										<div class="faq__item-img">
-											<img src="./images/icons/arrow-b.svg" alt="" />
+										<div class="faq__item-body">
+											<p>
+												Мы предлагаем ремонт компьютеров, ноутбуков, установку программ, настройку сети, удаление
+												вирусов и многое другое.
+											</p>
 										</div>
-									</div>
-									<div class="faq__item-text">
-										<p>
-											Мы предлагаем ремонт компьютеров, ноутбуков, установку
-											программного обеспечения, настройку сети, удаление вирусов
-											и многое другое.
-										</p>
-									</div>
-								</div>
-
-								<div class="faq__item">
-									<div class="faq__item-spoiler">
-										<div class="faq__item-title">
-											Какие услуги вы предоставляете?
-										</div>
-										<div class="faq__item-img">
-											<img src="./images/icons/arrow-b.svg" alt="" />
-										</div>
-									</div>
-									<div class="faq__item-text">
-										<p>
-											Мы предлагаем ремонт компьютеров, ноутбуков, установку
-											программного обеспечения, настройку сети, удаление вирусов
-											и многое другое.
-										</p>
-									</div>
-								</div>
-
-								<div class="faq__item">
-									<div class="faq__item-spoiler">
-										<div class="faq__item-title">
-											Какие услуги вы предоставляете?
-										</div>
-										<div class="faq__item-img">
-											<img src="./images/icons/arrow-b.svg" alt="" />
-										</div>
-									</div>
-									<div class="faq__item-text">
-										<p>
-											Мы предлагаем ремонт компьютеров, ноутбуков, установку
-											программного обеспечения, настройку сети, удаление вирусов
-											и многое другое.
-										</p>
-									</div>
-								</div>
-
-								<div class="faq__item">
-									<div class="faq__item-spoiler">
-										<div class="faq__item-title">
-											Какие услуги вы предоставляете?
-										</div>
-										<div class="faq__item-img">
-											<img src="./images/icons/arrow-b.svg" alt="" />
-										</div>
-									</div>
-									<div class="faq__item-text">
-										<p>
-											Мы предлагаем ремонт компьютеров, ноутбуков, установку
-											программного обеспечения, настройку сети, удаление вирусов
-											и многое другое.
-										</p>
-									</div>
-								</div>
-
-								<div class="faq__item">
-									<div class="faq__item-spoiler">
-										<div class="faq__item-title">
-											Какие услуги вы предоставляете?
-										</div>
-										<div class="faq__item-img">
-											<img src="./images/icons/arrow-b.svg" alt="" />
-										</div>
-									</div>
-									<div class="faq__item-text">
-										<p>
-											Мы предлагаем ремонт компьютеров, ноутбуков, установку
-											программного обеспечения, настройку сети, удаление вирусов
-											и многое другое.Мы предлагаем ремонт компьютеров,
-											ноутбуков, установку программного обеспечения, настройку
-											сети, удаление вирусов и многое другое.Мы предлагаем
-											ремонт компьютеров, ноутбуков, установку программного
-											обеспечения, настройку сети, удаление вирусов и многое
-											другое.Мы предлагаем ремонт компьютеров, ноутбуков,
-											установку программного обеспечения, настройку сети,
-											удаление вирусов и многое другое.Мы предлагаем ремонт
-											компьютеров, ноутбуков, установку программного
-											обеспечения, настройку сети, удаление вирусов и многое
-											другое.Мы предлагаем ремонт компьютеров, ноутбуков,
-											установку программного обеспечения, настройку сети,
-											удаление вирусов и многое другое.Мы предлагаем ремонт
-											компьютеров, ноутбуков, установку программного
-											обеспечения, настройку сети, удаление вирусов и многое
-											другое.
-										</p>
 									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="faq__feedback">
-							<form id="form" class="faq__feedback-content">
-								<input type="text" name="name" placeholder="Ваше имя:" />
-								<input
-									type="tel"
-									id="phone"
-									name="phone"
-									placeholder="* Телефон:"
-								/>
-								<textarea name="question" placeholder="Вопрос:"></textarea>
-								<div class="faq__feedback-checkbox">
-									<label>
-										<input type="checkbox" name="consent" />
-										<span>Я согласен(а) с обработкой персональных данных</span>
-									</label>
+							<div class="faq__form-block">
+								<form class="faq__form" id="form">
+									<input class="faq__input" type="text" name="name" placeholder="Ваше имя:" />
+									<input class="faq__input" type="tel" name="phone" id="phone" placeholder="* Телефон:" />
+									<textarea class="faq__textarea" name="question" placeholder="Вопрос:"></textarea>
+
+									<div class="faq__checkbox">
+										<label>
+											<input type="checkbox" name="consent" />
+											<span>Я согласен(а) с обработкой персональных данных</span>
+										</label>
+									</div>
+
+									<button class="faq__submit" type="submit">Отправить</button>
+								</form>
+
+								<div class="faq__image">
+									<img src="./images/quiz.png" alt="Форма обратной связи" />
 								</div>
-								<button type="submit" class="btn faq__btn">Отправить</button>
-							</form>
-
-							<div class="faq__feedback-img">
-								<img src="./images/quiz.png" alt="" />
 							</div>
 						</div>
 					</div>
@@ -587,31 +324,30 @@
 
 			<section class="section clients" id="clients">
 				<div class="container">
-					<div class="clients__content">
-						<div class="clients__info">
-							<div class="clients__title">Наши клиенты</div>
-							<p class="clients__text">
-								Мы обслуживаем компании разного уровня и направлений. Доверие
-								клиентов — наша главная ценность, и мы стремимся предлагать им
-								надежные и эффективные решения для их бизнеса.
+					<div class="clients__wrapper">
+						<div class="clients__header">
+							<h2 class="clients__title">Наши клиенты</h2>
+							<p class="clients__description">
+								Мы обслуживаем компании разного уровня и направлений. Доверие клиентов — наша главная ценность, и мы
+								стремимся предлагать им надежные и эффективные решения для их бизнеса.
 							</p>
 						</div>
 						<div class="clients__list">
 							<div class="clients__item">
-								<img src="./images/client-1.png" alt="" />
-								<p>Dodo Pizza</p>
+								<img class="clients__logo" src="./images/client-1.png" alt="Dodo Pizza" />
+								<p class="clients__name">Dodo Pizza</p>
 							</div>
 							<div class="clients__item">
-								<img src="./images/client-2.png" alt="" />
-								<p>Devidson <br />Group</p>
+								<img class="clients__logo" src="./images/client-2.png" alt="Devidson Group" />
+								<p class="clients__name">Devidson <br />Group</p>
 							</div>
 							<div class="clients__item">
-								<img src="./images/client-2.png" alt="" />
-								<p>СК Урал</p>
+								<img class="clients__logo" src="./images/client-2.png" alt="СК Урал" />
+								<p class="clients__name">СК Урал</p>
 							</div>
 							<div class="clients__item">
-								<img src="./images/client-2.png" alt="" />
-								<p>Рос <br />ТехноПлюс</p>
+								<img class="clients__logo" src="./images/client-2.png" alt="Рос ТехноПлюс" />
+								<p class="clients__name">Рос <br />ТехноПлюс</p>
 							</div>
 						</div>
 					</div>
@@ -620,21 +356,14 @@
 
 			<section class="section map">
 				<div class="container">
-					<div
-						style="position: relative; overflow: hidden; border-radius: 40px"
-					>
+					<div style="position: relative; overflow: hidden; border-radius: 40px">
 						<a
 							href="https://yandex.ru/maps/54/yekaterinburg/?utm_medium=mapframe&utm_source=maps"
 							style="color: #eee; font-size: 12px; position: absolute; top: 0px"
 							>Екатеринбург</a
 						><a
 							href="https://yandex.ru/maps/54/yekaterinburg/house/6_ya_ulitsa_66/YkkYcQFjQEMPQFtsfXt2eHpmYA==/?ll=60.764242%2C56.779554&utm_medium=mapframe&utm_source=maps&z=17.78"
-							style="
-								color: #eee;
-								font-size: 12px;
-								position: absolute;
-								top: 14px;
-							"
+							style="color: #eee; font-size: 12px; position: absolute; top: 14px"
 							>6-я улица, 66 — Яндекс Карты</a
 						><iframe
 							src="https://yandex.ru/map-widget/v1/?ll=60.764242%2C56.779554&mode=whatshere&whatshere%5Bpoint%5D=60.763933%2C56.779655&whatshere%5Bzoom%5D=17&z=17.78"
@@ -651,83 +380,62 @@
 			<footer class="footer">
 				<div class="container">
 					<div class="footer__top">
-						<div class="footer__top-logo">
-							<img src="./images/logo.png" alt="" />
-							<div class="footer__top-logo-text">
-								<b>Ремито</b>
+						<div class="footer__logo">
+							<img src="./images/logo.png" alt="Логотип" />
+							<div class="footer__logo-text">
+								<strong>Ремито</strong>
 								<p>Ремонт оргтехники</p>
 							</div>
 						</div>
-						<div class="footer__top-menu">
-							<div class="footer__top-menu-item">
-								<a href="#">Главная</a>
-							</div>
-							<div class="footer__top-menu-item">
-								<a href="#">О нас</a>
-							</div>
-							<div class="footer__top-menu-item">
-								<a href="#">Услуги</a>
-							</div>
-							<div class="footer__top-menu-item">
-								<a href="#">Наши клиенты</a>
-							</div>
-							<div class="footer__top-menu-item">
-								<a href="#">Контакты</a>
-							</div>
-						</div>
+						<nav class="footer__nav">
+							<a class="footer__nav-link" href="#">Главная</a>
+							<a class="footer__nav-link" href="#">О нас</a>
+							<a class="footer__nav-link" href="#">Услуги</a>
+							<a class="footer__nav-link" href="#">Наши клиенты</a>
+							<a class="footer__nav-link" href="#">Контакты</a>
+						</nav>
 					</div>
-					<div class="footer__down">
-						<div class="footer__down-addresses">
-							<h4>Адрес:</h4>
-							<span>г. Екатеринбург, Новокольцовский район</span>
-							<div class="footer__down-addresses-social">
-								<div class="footer__down-addresses-social__item">
-									<a href="https://t.me/aleksustm">
-										<img src="./images/icons/telegram.svg" alt="" />
-									</a>
-								</div>
-								<div class="footer__down-addresses-social__item">
-									<a href="https://wa.me/79630376182">
-										<img src="./images/icons/whatsapp.svg" alt="" />
-									</a>
-								</div>
-								<div class="footer__down-addresses-social__item">
-									<a href="mailto:slavabogu@mail.ru"
-										><img src="./images/icons/mail.svg" alt="" />
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="footer__down-contact">
-							<div class="footer__down-contact-item">
-								<img src="./images/icons/phone.svg" alt="" />
-								<div class="footer__down-contact-item__text">
-									<a href="tel:+79630376182">+7 (963) 037-61-82</a>
-								</div>
-							</div>
-							<div class="footer__down-contact-item">
-								<img src="./images/icons/mail.svg" alt="" />
-								<div class="footer__down-contact-item__text">
-									<a href="mailto:slavabogu@mail.ru">slavabogu@mail.ru</a>
-								</div>
-							</div>
-						</div>
-						<div class="footer__down-text">
-							<p>Только высококачественный ремонт компьютерной техники.</p>
-							<img src="./images/icons/arrow-t.svg" alt="" />
-						</div>
-					</div>
-					<div class="footer__copyright">
-						<div class="footer__copyright-text">
-							<div class="footer__copyright-block">
-								Copyright © 2023 - 2025 Ремито. Все права защищены.
-							</div>
 
-							<div>
-								Сайт создан разработчиком
-								<a href="https://nelon-arrive.ru">Nelon Arrive</a>
+					<div class="footer__middle">
+						<div class="footer__address">
+							<h4 class="footer__address-title">Адрес:</h4>
+							<span class="footer__address-text">г. Екатеринбург, Новокольцовский район</span>
+							<div class="footer__socials">
+								<a class="footer__social" href="https://t.me/aleksustm">
+									<img src="./images/icons/telegram.svg" alt="Telegram" />
+								</a>
+								<a class="footer__social" href="https://wa.me/79630376182">
+									<img src="./images/icons/whatsapp.svg" alt="WhatsApp" />
+								</a>
+								<a class="footer__social" href="mailto:slavabogu@mail.ru">
+									<img src="./images/icons/mail.svg" alt="Email" />
+								</a>
 							</div>
 						</div>
+
+						<div class="footer__contacts">
+							<div class="footer__contact-item">
+								<img src="./images/icons/phone.svg" alt="Телефон" />
+								<a class="footer__contact-text" href="tel:+79630376182">+7 (963) 037-61-82</a>
+							</div>
+							<div class="footer__contact-item">
+								<img src="./images/icons/mail.svg" alt="Почта" />
+								<a class="footer__contact-text" href="mailto:slavabogu@mail.ru">slavabogu@mail.ru</a>
+							</div>
+						</div>
+
+						<div class="footer__desc">
+							<p>Только высококачественный ремонт компьютерной техники.</p>
+							<img src="./images/icons/arrow-t.svg" alt="Вверх" />
+						</div>
+					</div>
+
+					<div class="footer__bottom">
+						<p class="footer__copy">© 2023 – 2025 Ремито. Все права защищены.</p>
+						<p class="footer__dev">
+							Сайт создан разработчиком
+							<a href="https://nelon-arrive.ru">Nelon Arrive</a>
+						</p>
 					</div>
 				</div>
 			</footer>

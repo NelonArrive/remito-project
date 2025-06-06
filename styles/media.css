@@ -113,6 +113,24 @@
 }
 
 @media screen and (max-width: 1024px) {
+	.services__text {
+		opacity: 0.6;
+		line-height: 23px;
+		margin-top: 0;
+	}
+	.services__button {
+		padding: 20px 40px;
+		font-size: 19px;
+	}
+	.services__item {
+		height: auto;
+		padding-top: 15px;
+		padding-left: 20px;
+		margin: 10px 0;
+	}
+	.services__price {
+		margin: 10px 0;
+	}
 	.advantages {
 		border-bottom-right-radius: 175px;
 		border-top-left-radius: 175px;
@@ -183,6 +201,9 @@
 }
 
 @media screen and (max-width: 996px) {
+	.swiper {
+		padding-top: 8%;
+	}
 	.home {
 		background-image: none, url("/images/2bg.webp"),
 			linear-gradient(#5618a5ed 0%, #5618a5ed 100%), url("/images/1bg.webp");
@@ -215,6 +236,15 @@
 }
 
 @media screen and (max-width: 768px) {
+	.swiper {
+		padding-top: 10px;
+	}
+	.swiper-buttons {
+		display: none;
+	}
+	.services__title {
+		position: static;
+	}
 	.home {
 		padding-bottom: 100px;
 		background-image: url("/images/2bg.webp"),
@@ -286,6 +316,9 @@
 }
 
 @media screen and (max-width: 676px) {
+	.services__title {
+		font-size: 6vh;
+	}
 	.footer__copyright {
 		font-size: 12px;
 		line-height: 1.2;
@@ -342,6 +375,19 @@
 		width: 40px;
 		gap: 4px;
 		min-height: 40px;
+	}
+	.services__item {
+		background-size: auto, 185px auto, 185px auto;
+	}
+	.services__button {
+		padding: 18px 30px;
+		font-size: 19px;
+	}
+	.services__image {
+		margin-bottom: 0;
+	}
+	.services__price {
+		margin: 0;
 	}
 }
 
